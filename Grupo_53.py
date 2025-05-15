@@ -12,6 +12,34 @@ sns.set_style("whitegrid")
 sns.color_palette("Set2")
 st.title("🛍️ Análisis de Datos de una Cadena de Supermercados en Myanmar")
 
+# Estilo de las métricas
+st.markdown("""
+<style>
+
+[data-testid="block-container"] {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    margin-bottom: -7rem;
+}
+[data-testid="stVerticalBlock"] {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+[data-testid="stMetric"] {
+    background-color: #B6BABE;
+    text-align: center;
+    padding: 15px 0;
+}
+[data-testid="stMetricLabel"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+            </style>
+""", unsafe_allow_html=True)
+
 # Cargar datos con caché para mejorar rendimiento
 @st.cache_data
 def cargar_datos():
